@@ -39,7 +39,7 @@ header::after {
   content: "";
   width: 180px;
   height: 89px;
-  background: url("../img/logo-tgl.png");
+  background: url("../img/sprite.png") -385px -653px;
 }
 
 header nav {
@@ -81,6 +81,38 @@ nav a {
   text-decoration: none;
 }
 
+nav .active {
+  color: #2eb398;
+}
+
+nav a:hover {
+  color: #2eb398;
+}
+
+nav a:active {
+  opacity: 0.6;
+}
+
+nav::before {
+  position: absolute;
+  top: 74px;
+  left: 30px;
+  content: "";
+  width: 410px;
+  height: 1px;
+  background-color: #ededed;
+}
+
+nav::after {
+  position: absolute;
+  top: 74px;
+  right: 30px;
+  content: "";
+  width: 410px;
+  height: 1px;
+  background-color: #ededed;
+}
+
 .logo {
   position: absolute;
   top: 11px;
@@ -92,11 +124,40 @@ nav a {
 }
 
 .portfolio {
+  position: relative;
   padding-top: 142px;
 }
 
+.portfolio::after {
+  position: absolute;
+  left: 30px;
+  bottom: 11px;
+  content: "";
+  width: 960px;
+  height: 1px;
+  background-color: #ededed;
+}
+
 .row {
+  position: relative;
   margin-left: 100px;
+}
+
+.row::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 104px;
+  background-color: #ededed;
+}
+
+.row::after {
+  position: absolute;
+  right: 100px;
+  content: "";
+  width: 1px;
+  height: 104px;
+  background-color: #ededed;
 }
 
 .last-row {
@@ -123,14 +184,164 @@ nav a {
   overflow: hidden;
 }
 
-.hex-two::before {
+.hex-img-1::before {
   position: absolute;
   content: "";
   width: 180px;
   height: 206px;
   background-color: #bfbfbf;
-  background: url("../img/hex-1.png");
+  background: url("../img/sprite.png") -212px -5px;
   transform: rotate(120deg);
+  filter: sepia(50%);
+}
+
+.hex-img-2::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -5px -437px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-3::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -195px -437px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-4::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -385px -437px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-5::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -592px -5px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-6::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -575px -221px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-7::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -575px -437px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-8::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -5px -653px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-9::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -195px -653px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-10::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -402px -5px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-11::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -5px -221px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-12::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -195px -221px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-13::before {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 206px;
+  background-color: #bfbfbf;
+  background: url("../img/sprite.png") -385px -221px;
+  transform: rotate(120deg);
+  filter: sepia(60%);
+}
+
+.hex-img-1:hover::before,
+.hex-img-2:hover::before,
+.hex-img-3:hover::before,
+.hex-img-4:hover::before,
+.hex-img-5:hover::before,
+.hex-img-6:hover::before,
+.hex-img-7:hover::before,
+.hex-img-8:hover::before,
+.hex-img-9:hover::before,
+.hex-img-10:hover::before,
+.hex-img-11:hover::before,
+.hex-img-12:hover::before,
+.hex-img-13:hover::before {
+  filter: sepia(0%);
+  transition: ease-in 0.3s;
 }
 
 .hex img {
@@ -152,6 +363,11 @@ nav a {
   display: inline-block;
   vertical-align: top;
   margin-right: 3px;
+}
+
+.toggle a {
+  display: inline-block;
+  vertical-align: top;
   width: 6px;
   height: 6px;
   background-color: #ddd2c5;
@@ -159,6 +375,18 @@ nav a {
 
 .toggle li:last-child {
   margin-right: 0;
+}
+
+.toggle .active {
+  background-color: #8b8784;
+}
+
+.toggle a:hover {
+  background-color: #8b8784;
+}
+
+.toggle a:active {
+  opacity: 0.6;
 }
 
 .about {
@@ -179,6 +407,14 @@ nav a {
   margin: 0;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.about .hex-img-1::before {  /* если изображение через img не загрузится*/
+  filter: sepia(0);
+}
+
+.about .hex-img-1:hover::before {  /* если изображение через img не загрузится*/
+  transition: 0s;
 }
 
 .description {
@@ -208,9 +444,48 @@ nav a {
 .social li {
   display: inline-block;
   vertical-align: top;
-  width: 24px;
+
+}
+
+.social a:hover {
+  opacity: 0.6;
+}
+
+.social a:active {
+  opacity: 0.3;
+}
+
+.social-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 25px;
   height: 24px;
-  background-color: lightblue;
+}
+
+ .fb {
+  background: url("../img/sprite.png") -39px -5px;
+}
+
+.tw {
+  width: 24px;
+  background: url("../img/sprite.png") -178px -5px  ;
+}
+
+.gg {
+  background: url("../img/sprite.png") -74px -5px;
+}
+
+.pi {
+  width: 24px;
+  background: url("../img/sprite.png") -144px -5px;
+}
+
+.li {
+  background: url("../img/sprite.png") -109px -5px;
+}
+
+.dr {
+  background: url("../img/sprite.png") -5px -5px;
 }
 
 footer {
@@ -251,10 +526,35 @@ form {
 form input {
   display: block;
   margin-bottom: 16px;
-  width: 580px;
+  padding: 14px;
+  width: 584px;
+  height: 38px;
+  font-family: inherit;
+  color: #e0e0e0;
+  background-color: #454545;
+  border: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  margin-bottom: 16px;
+  width: 584px;
+  height: 150px;
+  padding: 14px;
+  font-family: inherit;
+  color: #e0e0e0;
+  background-color: #454545;
+  border: none;
+  box-sizing: border-box;
+}
+
+form input:hover,
+form textarea:hover {
+  background-color: #45454f;
 }
 
 form button {
+  float: right;
   padding-top: 13px;
   padding-right: 30px;
   padding-bottom: 13px;
@@ -264,7 +564,19 @@ form button {
   line-height: 12px;
   color: #d7fcf5;
   background-color: #2eb398;
+  text-decoration: none;
+  border: none;
   text-transform: uppercase;
+}
+
+form button:hover {
+  color: #031314;
+  background-color: #20bfcf;
+  cursor: pointer;
+}
+
+form button:active {
+  opacity: 0.6;
 }
 
 .contacts {
@@ -280,9 +592,49 @@ form button {
 }
 
 .contacts a {
+  position: relative;
   display: block;
+  padding-left: 25px;
   color: #e0e0e0;
   text-decoration: none;
+}
+
+.contacts a:hover {
+  color: #2eb398;
+}
+
+.contacts a:active {
+  opacity: 0.6;
+}
+
+.contacts .location::before {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  content: "";
+  width: 7px;
+  height: 11px;
+  background: url("../img/sprite.png") -782px -5px;
+}
+
+.contacts .tel::before {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: url("../img/sprite.png") -822px -5px;
+}
+
+.contacts .mail::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  content: "";
+  width: 13px;
+  height: 8px;
+  background: url("../img/sprite.png") -799px -5px;
 }
 
 .copyright {
@@ -296,4 +648,12 @@ form button {
 .copyright a {
   color: #3e3e3e;
   text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #2eb398;
+}
+
+.copyright a:active {
+  opacity: 0.6;
 }
