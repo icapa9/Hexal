@@ -138,6 +138,23 @@ nav::after {
   background-color: #ededed;
 }
 
+.slider input {
+  display: none;
+}
+
+.slide-1,
+.slide-2 {
+  display: none;
+}
+
+#radio-1:checked ~ .slide-1 {
+  display: block;
+}
+
+#radio-2:checked ~ .slide-2 {
+  display: block;
+}
+
 .row {
   position: relative;
   margin-left: 100px;
@@ -160,7 +177,7 @@ nav::after {
   background-color: #ededed;
 }
 
-.last-row {
+.slider {
   margin-bottom: 60px;
 }
 
@@ -184,147 +201,130 @@ nav::after {
   overflow: hidden;
 }
 
-.hex-img-1::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -212px -5px;
-  transform: rotate(120deg);
-  filter: sepia(50%);
-}
-
-.hex-img-2::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -5px -437px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-3::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -195px -437px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-4::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -385px -437px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-5::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -592px -5px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-6::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -575px -221px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-7::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -575px -437px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-8::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -5px -653px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-9::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -195px -653px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-10::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -402px -5px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-11::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -5px -221px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
-.hex-img-12::before {
-  position: absolute;
-  content: "";
-  width: 180px;
-  height: 206px;
-  background-color: #bfbfbf;
-  background: url("../img/sprite.png") -195px -221px;
-  transform: rotate(120deg);
-  filter: sepia(60%);
-}
-
+.hex-img-1::before,
+.hex-img-2::before,
+.hex-img-3::before,
+.hex-img-4::before,
+.hex-img-5::before,
+.hex-img-6::before,
+.hex-img-7::before,
+.hex-img-8::before,
+.hex-img-9::before,
+.hex-img-10::before,
+.hex-img-11::before,
+.hex-img-12::before,
 .hex-img-13::before {
   position: absolute;
   content: "";
   width: 180px;
   height: 206px;
   background-color: #bfbfbf;
-  background: url("../img/sprite.png") -385px -221px;
   transform: rotate(120deg);
-  filter: sepia(60%);
+  filter: sepia(50%);
+}
+
+.slide-1 .hex-img-1::before {
+  background: url("../img/sprite.png") -212px -5px;
+}
+
+.slide-1 .hex-img-2::before {
+  background: url("../img/sprite.png") -5px -437px;
+}
+
+.slide-1 .hex-img-3::before {
+  background: url("../img/sprite.png") -195px -437px;
+}
+
+.slide-1 .hex-img-4::before {
+  background: url("../img/sprite.png") -385px -437px;
+}
+
+.slide-1 .hex-img-5::before {
+  background: url("../img/sprite.png") -592px -5px;
+}
+
+.slide-1 .hex-img-6::before {
+  background: url("../img/sprite.png") -575px -221px;
+}
+
+.slide-1 .hex-img-7::before {
+  background: url("../img/sprite.png") -575px -437px;
+}
+
+.slide-1 .hex-img-8::before {
+  background: url("../img/sprite.png") -5px -653px;
+}
+
+.slide-1 .hex-img-9::before {
+  background: url("../img/sprite.png") -195px -653px;
+}
+
+.slide-1 .hex-img-10::before {
+  background: url("../img/sprite.png") -402px -5px;
+}
+
+.slide-1 .hex-img-11::before {
+  background: url("../img/sprite.png") -5px -221px;
+}
+
+.slide-1 .hex-img-12::before {
+  background: url("../img/sprite.png") -195px -221px;
+}
+
+.slide-1 .hex-img-13::before {
+  background: url("../img/sprite.png") -385px -221px;
+}
+
+.slide-2 .hex-img-1::before {
+  background: url("../img/adventure-time.jpg") -845px -725px;
+}
+
+.slide-2 .hex-img-2::before {
+  background: url("../img/adventure-time.jpg") -1000px -635px;
+}
+
+.slide-2 .hex-img-3::before {
+  background: url("../img/adventure-time.jpg") -490px -465px;
+}
+
+.slide-2 .hex-img-4::before {
+  background: url("../img/adventure-time.jpg") -1360px -530px;
+}
+
+.slide-2 .hex-img-5::before {
+  background: url("../img/adventure-time.jpg") -675px -595px;
+}
+
+.slide-2 .hex-img-6::before {
+  background: url("../img/adventure-time.jpg") -575px -225px;
+}
+
+.slide-2 .hex-img-7::before {
+  background: url("../img/adventure-time.jpg") -1205px -660px;
+}
+
+.slide-2 .hex-img-8::before {
+  background: url("../img/adventure-time.jpg") -780px -880px;
+}
+
+.slide-2 .hex-img-9::before {
+  background: url("../img/adventure-time.jpg") -950px -874px;
+}
+
+.slide-2 .hex-img-10::before {
+  background: url("../img/adventure-time.jpg") -520px -825px;
+}
+
+.slide-2 .hex-img-11::before {
+  background: url("../img/adventure-time.jpg") -850px -320px;
+}
+
+.slide-2 .hex-img-12::before {
+  background: url("../img/adventure-time.jpg") -970px -30px;
+}
+
+.slide-2 .hex-img-13::before {
+  background: url("../img/adventure-time.jpg") -370px -640px;
 }
 
 .hex-img-1:hover::before,
@@ -348,45 +348,38 @@ nav::after {
   transform: rotate(120deg);
 }
 
-.toggle {
+.slider-toggle {
   display: inline-block;
   vertical-align: top;
   margin: 0;
   margin-left: 30px;
   margin-bottom: 23px;
-  padding: 0;
   line-height: 6px;
-  list-style-type: none;
 }
 
-.toggle li {
+.slider-toggle label {
   display: inline-block;
   vertical-align: top;
   margin-right: 3px;
-}
-
-.toggle a {
-  display: inline-block;
-  vertical-align: top;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background-color: #ddd2c5;
 }
 
-.toggle li:last-child {
-  margin-right: 0;
-}
-
-.toggle .active {
+.slider-toggle .active {
   background-color: #8b8784;
 }
 
-.toggle a:hover {
+.slider-toggle label:hover {
   background-color: #8b8784;
 }
 
-.toggle a:active {
+.slider-toggle label:active {
   opacity: 0.6;
+}
+
+.slider-toggle label:last-child {
+  margin-right: 0;
 }
 
 .about {
